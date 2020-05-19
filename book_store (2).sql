@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2020 at 08:03 AM
+-- Generation Time: May 19, 2020 at 08:26 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -63,7 +63,8 @@ INSERT INTO `category` (`id`, `category_name`, `category_dec`, `category_img`) V
 (11, 'Arts & Photography', 'Artists books explore ideas and concepts through form as much as content', 'Arts&Photography/1589395922_product-7.jpg'),
 (12, 'Biographies', 'is a detailed description of a person life It involves more than just the basic facts like education', 'Biographies/1589395883_product-3.jpg'),
 (13, 'Business & Money', 'explain to your kids that owning shares of stock in that company makes them a partowner of the company', 'Business&Money/1589393464_product-6.jpg'),
-(14, 'Childrens Books', 'When you jjjj jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjjjjjjjjjjjj ijjjjj ijmoijio uhioh uhiolh uhihnkj  uhih hui huiuhj ijoijo jiojoi ijoji ioomlkm kmm kjiojo kojioj knujujuj ijim kkkk jjjjjjjjjjjjj kjjjjjjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjj ggggggggggggg nnnnnnnnnnnnnnnnnnnnnn uuuuuuuuuuuuuuuuuu mmmmmmmmmmmmmmmmm ', 'ChildrensBooks/1589663094_donor-relations-graphic.jpg');
+(14, 'Childrens Books', 'this section for child its include story and learn', 'ChildrensBooks/1589766588_ew.jfif'),
+(16, 'language', 'this section for all book language', 'Language/1589782013_product-13.jpg');
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,9 @@ INSERT INTO `cat_discount_pro` (`id`, `id_dis`, `id_cat`, `id_pro`) VALUES
 (8, 20, 14, 63),
 (9, 20, 12, 61),
 (10, 50, 13, 65),
-(11, 50, 12, 66);
+(11, 50, 12, 66),
+(12, 30, 16, 69),
+(13, 30, 11, 60);
 
 -- --------------------------------------------------------
 
@@ -281,9 +284,21 @@ INSERT INTO `chat_message` (`chat_message_id`, `to_user_id`, `from_user_id`, `ch
 (152, 1, 8, 'lkml', '2020-05-14 14:31:53', 0),
 (153, 8, 1, 'hbhnkiui', '2020-05-14 14:32:05', 0),
 (154, 1, 8, 'kjnk', '2020-05-14 14:33:14', 0),
-(155, 8, 1, 'dfvd', '2020-05-16 19:05:36', 1),
+(155, 8, 1, 'dfvd', '2020-05-16 19:05:36', 0),
 (156, 7, 1, 'ioiokio', '2020-05-16 19:06:59', 0),
-(157, 1, 7, 'jyhjgy', '2020-05-16 23:35:27', 1);
+(157, 1, 7, 'jyhjgy', '2020-05-16 23:35:27', 0),
+(158, 1, 8, 'jiosjds', '2020-05-18 01:28:56', 0),
+(159, 7, 1, 'sfsefsefsfs', '2020-05-18 01:29:56', 0),
+(160, 8, 1, 'fseefesswf', '2020-05-18 01:30:20', 0),
+(161, 9, 1, 'efef', '2020-05-18 06:20:33', 1),
+(162, 8, 1, 'erfr3r3😋', '2020-05-18 06:20:45', 0),
+(163, 1, 8, '😙', '2020-05-18 16:32:09', 0),
+(164, 8, 1, 'yjkli', '2020-05-18 18:54:10', 0),
+(165, 1, 8, 't6ght7h7', '2020-05-18 19:13:46', 0),
+(166, 8, 1, '7y6y6', '2020-05-18 19:14:09', 0),
+(167, 1, 8, 'joijoijio', '2020-05-18 19:48:43', 0),
+(168, 8, 1, 'ojikjol', '2020-05-18 19:49:01', 0),
+(169, 1, 7, 'uihikhoi', '2020-05-18 19:50:12', 0);
 
 -- --------------------------------------------------------
 
@@ -312,7 +327,11 @@ INSERT INTO `comment_table` (`id_comment`, `name`, `email`, `comment`, `id_produ
 (5, 'lijo', 'vboyle@example.com', 'uygu', 60, '0000-00-00'),
 (6, 'منةم', 'wlaa@wlaa', 'تاه', 60, '2020-05-15'),
 (7, 'صصثجمي', 'alo2@gmail.com', 'صخهتيصخ', 61, '2020-05-17'),
-(8, 'alaa', 'alo2@gmail.com', 'hello this book new?', 60, '2020-05-17');
+(8, 'alaa', 'alo2@gmail.com', 'hello this book new?', 60, '2020-05-17'),
+(9, 'alaa', 'alo2@gmail.com', 'how this book ?', 67, '2020-05-18'),
+(10, 'hnaa', 'hnaa@gmail.com', 'hi this nice book', 67, '2020-05-18'),
+(11, 'alaa', 'alo2@gmail.com', 'hi how this book?', 69, '2020-05-18'),
+(12, 'alaa', 'alo2.omar92@gmail.com', 'how this book ', 62, '2020-05-18');
 
 -- --------------------------------------------------------
 
@@ -337,8 +356,9 @@ CREATE TABLE `customer_table` (
 --
 
 INSERT INTO `customer_table` (`id_customer`, `full_name_customer`, `phone_customer`, `email_customer`, `street_customer`, `city_customer`, `password_customer`, `promo_code`, `status_promo`) VALUES
-(7, 'alaa', 2147483647, 'alo2.omar92i@gmail.com', 'amman', 'amman', '123456', 'SPptLI', 0),
-(8, 'hnaa', 123456789, 'alaaomaralshobaki@gmail.com', 'hhhh', 'hhh', '123456', 'qzY2Yx', 0);
+(7, 'alaa omar alshobaki', 2147483647, 'alo2.omar92@gmail.com', 'alarab', 'shafabdran', '123456', '123452', 0),
+(8, 'wlaa omar alshobaki', 2147483647, 'walaaalshobaki956@gmail.com', 'alarab', 'shafabdran', '123456', 'hhggff', 1),
+(9, 'hlaa omar alshobaki', 2147483647, 'walaaalshobaki956@gmail.com', 'alarab', 'shafabdran', '123456', '4A5GAE', 0);
 
 -- --------------------------------------------------------
 
@@ -359,8 +379,9 @@ CREATE TABLE `discount` (
 --
 
 INSERT INTO `discount` (`discount_value`, `discount_unit`, `start_disc`, `end_disc`, `disc_desc`) VALUES
-(20, '20%', '2020-05-14', '2020-05-14', 'discount'),
-(50, '50%', '2020-05-13', '2020-05-20', 'discount for this week on sections');
+(20, '20%', '2020-05-22', '2020-05-28', 'discount'),
+(30, '30', '2020-05-21', '2020-05-30', 'discription 30%'),
+(50, '50%', '2020-05-22', '2020-05-28', 'discount for this week on sections');
 
 -- --------------------------------------------------------
 
@@ -391,8 +412,15 @@ INSERT INTO `gallery` (`id`, `pro_id`, `image`) VALUES
 (48, 61, 'uploads/Biographies/OnBecomingALeader/1589395073_product-3.jpg'),
 (49, 61, 'uploads/Biographies/OnBecomingALeader/1589395073_product-5.jpg'),
 (50, 62, 'uploads/Childrensbooks/QuantiomPhisich/1589468037_51pNYbuPA9L._AC_SX184_.jpg'),
-(52, 64, 'uploads/Biographies/Horror/1589503599_wb1.jpg'),
-(53, 65, 'uploads/Business&money/ShortStory/1589504010_91aW1-EYKDL.SR160,240_BG243,243,243.jpg');
+(52, 64, 'uploads/Biographies/Horror/1589813149_9780007489978-The-Lord-of-The-Rings-7-book-boxset-E.jpg'),
+(53, 65, 'uploads/Business&money/ShortStory/1589504010_91aW1-EYKDL.SR160,240_BG243,243,243.jpg'),
+(57, 67, 'uploads/Childrensbooks/TomAndJeryStory/1589766432_wedw.jpg'),
+(58, 67, 'uploads/Childrensbooks/TomAndJeryStory/1589766432_eee.jpg'),
+(62, 69, 'uploads/Language/EnglishBook/1589782199_product-details-1.jpg'),
+(63, 69, 'uploads/Language/EnglishBook/1589782199_product-details-2.jpg'),
+(64, 69, 'uploads/Language/EnglishBook/1589782199_product-details-3.jpg'),
+(65, 69, 'uploads/Language/EnglishBook/1589782200_product-details-4.jpg'),
+(66, 69, 'uploads/Language/EnglishBook/1589782200_product-details-5.jpg');
 
 -- --------------------------------------------------------
 
@@ -491,7 +519,29 @@ INSERT INTO `login_details` (`login_details_id`, `user_id`, `last_activity`, `is
 (83, 1, '2020-05-16 20:44:27', 'no'),
 (84, 7, '2020-05-16 21:52:53', 'no'),
 (85, 7, '2020-05-16 22:00:18', 'no'),
-(86, 7, '2020-05-16 23:36:32', 'no');
+(86, 7, '2020-05-17 13:39:29', 'no'),
+(87, 9, '2020-05-17 17:59:03', 'no'),
+(88, 8, '2020-05-17 19:54:34', 'no'),
+(89, 8, '2020-05-17 21:02:20', 'no'),
+(90, 8, '2020-05-18 01:11:30', 'no'),
+(91, 1, '2020-05-18 06:22:28', 'no'),
+(92, 1, '2020-05-18 09:49:33', 'no'),
+(93, 7, '2020-05-18 09:53:12', 'no'),
+(94, 1, '2020-05-18 14:28:41', 'no'),
+(95, 8, '2020-05-18 19:49:48', 'no'),
+(96, 7, '2020-05-18 20:14:48', 'no'),
+(97, 8, '2020-05-18 20:15:59', 'no'),
+(98, 8, '2020-05-18 20:39:04', 'no'),
+(99, 8, '2020-05-18 20:39:37', 'no'),
+(100, 8, '2020-05-18 20:40:27', 'no'),
+(101, 8, '2020-05-18 20:43:44', 'no'),
+(102, 8, '2020-05-18 20:51:20', 'no'),
+(103, 8, '2020-05-18 20:52:26', 'no'),
+(104, 8, '2020-05-18 23:42:24', 'no'),
+(105, 1, '2020-05-18 23:42:34', 'no'),
+(106, 1, '2020-05-18 23:44:19', 'no'),
+(107, 1, '2020-05-19 01:07:43', 'no'),
+(108, 8, '2020-05-19 14:57:32', 'no');
 
 -- --------------------------------------------------------
 
@@ -517,7 +567,38 @@ INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `quantity`, `list_pri
 (7, 4, 59, 3, 0),
 (8, 4, 65, 5, 0),
 (9, 4, 66, 2, 0),
-(10, 5, 60, 2, 20);
+(10, 5, 60, 2, 20),
+(11, 7, 61, 3, 60),
+(12, 8, 61, 3, 60),
+(13, 9, 61, 3, 60),
+(14, 10, 61, 3, 60),
+(15, 11, 61, 3, 60),
+(16, 12, 61, 3, 60),
+(17, 13, 61, 3, 60),
+(18, 14, 61, 3, 60),
+(19, 15, 61, 1, 20),
+(20, 16, 60, 1, 30),
+(21, 17, 60, 1, 30),
+(22, 18, 60, 5, 150),
+(23, 19, 60, 5, 150),
+(24, 20, 65, 1, 180),
+(25, 21, 69, 1, 61),
+(26, 22, 61, 3, 60),
+(27, 23, 61, 3, 60),
+(28, 24, 61, 3, 60),
+(29, 25, 61, 3, 60),
+(30, 26, 60, 3, 90),
+(31, 27, 60, 1, 30),
+(32, 28, 60, 1, 30),
+(33, 29, 61, 1, 20),
+(34, 30, 60, 1, 30),
+(35, 31, 60, 1, 60),
+(36, 32, 60, 1, 30),
+(37, 33, 60, 1, 30),
+(38, 34, 61, 1, 20),
+(39, 35, 65, 1, 15),
+(40, 36, 61, 7, 70),
+(41, 37, 62, 1, 136);
 
 -- --------------------------------------------------------
 
@@ -539,7 +620,39 @@ CREATE TABLE `order_table` (
 
 INSERT INTO `order_table` (`id_order`, `customer_id`, `order_status`, `order_date`, `total`) VALUES
 (4, 8, 1, '2020-05-11', 90),
-(5, 7, 1, '2020-05-06', 200);
+(5, 7, 1, '2020-05-06', 200),
+(6, 7, 1, '2020-05-17', 47),
+(7, 7, 1, '2020-05-17', 47),
+(8, 7, 1, '2020-05-17', 47),
+(9, 9, 1, '2020-05-17', 47),
+(10, 9, 0, '2020-05-17', 65),
+(11, 9, 0, '2020-05-17', 65),
+(12, 9, 0, '2020-05-17', 65),
+(13, 9, 0, '2020-05-17', 65),
+(14, 9, 0, '2020-05-17', 65),
+(15, 8, 0, '2020-05-17', 25),
+(16, 8, 0, '2020-05-18', 35),
+(17, 8, 0, '2020-05-18', 35),
+(18, 8, 0, '2020-05-18', 155),
+(19, 8, 0, '2020-05-18', 155),
+(20, 8, 0, '2020-05-18', 185),
+(21, 8, 0, '2020-05-18', 47.7),
+(22, 7, 0, '2020-05-18', 65),
+(23, 7, 0, '2020-05-18', 65),
+(24, 7, 0, '2020-05-18', 65),
+(25, 7, 0, '2020-05-18', 65),
+(26, 7, 0, '2020-05-18', 95),
+(27, 7, 0, '2020-05-18', 35),
+(28, 7, 0, '2020-05-18', 35),
+(29, 7, 0, '2020-05-18', 25),
+(30, 8, 0, '2020-05-18', 35),
+(31, 8, 0, '2020-05-18', 65),
+(32, 8, 0, '2020-05-18', 35),
+(33, 8, 0, '2020-05-18', 35),
+(34, 8, 0, '2020-05-18', 25),
+(35, 8, 0, '2020-05-19', 20),
+(36, 8, 0, '2020-05-19', 75),
+(37, 8, 0, '2020-05-19', 100.2);
 
 -- --------------------------------------------------------
 
@@ -562,14 +675,16 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id_product`, `prod_name`, `prod_desc`, `author_name`, `price_prod`, `product_qty`, `id_cat`) VALUES
-(59, 'Abstract Art', 'Since the early years of the 20th century Western abstract art has fascinated, outraged and bewildered audiences its path to acceptance within the artistic mainstream was slow Anna Moszynska traces the origins and evolution of abstract art', 'Anna Moszynska', 30, 20, 11),
-(60, 'Monet', 'is one of the most admired and famous painters of all time and the architect of Impressionism a revolution that gave birth to modern art. His technique  painting out of doors', 'james H Rubian', 30, 40, 11),
-(61, 'ON BECOMING A LEADER', 'Deemed the dean of leadership gurus by Forbes magazine Warren Bennis has for years persuasively argued that leaders are not born they are made', ' Warren G', 20, 30, 12),
-(62, 'quantiom phisich', 'quantiom phisich', 'Chris Ferrie', 20, 10, 14),
+(59, 'Abstract Art', 'Since the early years of the 20th century Western abstract art has fascinated, outraged and bewildered audiences its path to acceptance within the artistic mainstream was slow Anna Moszynska traces the origins and evolution of abstract art', 'Anna Moszynska', 30, 10, 11),
+(60, 'Abstract Art', 'Since the early years of the 20th century Western abstract art has fascinated, outraged and bewildered audiences its path to acceptance within the artistic mainstream was slow Anna Moszynska traces the origins and evolution of abstract art', 'Anna Moszynska', 30, 1, 11),
+(61, 'ON BECOMING A LEADER', 'Deemed the dean of leadership gurus by Forbes magazine Warren Bennis has for years persuasively argued that leaders are not born they are made', ' Warren G', 20, 18, 12),
+(62, 'quantiom phisich', 'quantiom phisich', 'Chris Ferrie', 20, 9, 14),
 (63, 'Iggy Peck and the Mysterious Mansion', 'Iggy Peck and the Mysterious Mansion Iggy Peck and the Mysterious Mansion', 'Andrea Beaty', 10, 20, 14),
 (64, 'Horror', 'Horror Horror Horror Horror', 'Horror', 30, 20, 12),
-(65, 'Short story', 'Short story Short story Short story', 'Short story', 30, 20, 13),
-(66, 'Mystery', 'Mystery Mystery Mystery Mystery Mystery', 'Mystery', 90, 10, 12);
+(65, 'Short story', 'Short story Short story Short story', 'Short story', 30, 19, 13),
+(66, 'Mystery', 'Mystery Mystery Mystery Mystery Mystery', 'Mystery', 90, 10, 12),
+(67, 'tom and jery story', 'this book include short story for children', 'tom', 10, 50, 14),
+(69, 'english book', 'this book for learning English converging', 'jeff tom', 15, 20, 16);
 
 -- --------------------------------------------------------
 
@@ -590,7 +705,8 @@ CREATE TABLE `slider_table` (
 
 INSERT INTO `slider_table` (`slider_id`, `img`, `slider_descr`, `status`) VALUES
 (10, 'uploads/slider/1589408512_home-slider-1-ai.png', 'Buy 3. Get Free 1.', 1),
-(11, 'uploads/slider/1589408531_home-slider-2-ai.png', 'Deal of the week up to 50% off Special offer', 1);
+(11, 'uploads/slider/1589408531_home-slider-2-ai.png', 'Deal of the week up to 50% off Special offer', 1),
+(12, 'uploads/slider/1589813006_new_intro_books_9_28.png', 'offer 50%', 1);
 
 --
 -- Indexes for dumped tables
@@ -703,13 +819,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `cat_discount_pro`
 --
 ALTER TABLE `cat_discount_pro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `chat`
@@ -721,55 +837,55 @@ ALTER TABLE `chat`
 -- AUTO_INCREMENT for table `chat_message`
 --
 ALTER TABLE `chat_message`
-  MODIFY `chat_message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
+  MODIFY `chat_message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170;
 
 --
 -- AUTO_INCREMENT for table `comment_table`
 --
 ALTER TABLE `comment_table`
-  MODIFY `id_comment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_comment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `customer_table`
 --
 ALTER TABLE `customer_table`
-  MODIFY `id_customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `login_details`
 --
 ALTER TABLE `login_details`
-  MODIFY `login_details_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `login_details_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `order_table`
 --
 ALTER TABLE `order_table`
-  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `slider_table`
 --
 ALTER TABLE `slider_table`
-  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables

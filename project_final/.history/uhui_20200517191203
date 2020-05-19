@@ -1,0 +1,70 @@
+
+//  if enter promo code then click in order                            
+                                     if(isset($_POST['placeOrder'])){ 
+                                      $name = @$_POST['name'];
+                                      $email= @$_POST['email'];
+                                      $phone= @$_POST['phone'];
+                                      $pass = @$_POST['pass'];
+                                      $city = @$_POST['city'];
+                                      $street = @$_POST['street'];
+                                      $CODE   = @$_POST['coupon_code'];
+                                      $status = "1";
+                                      $Grand = @$_POST['Grand'];
+                                      $quantity =@$_POST['quantity'];
+                                      $sub=   @$_POST['sub'];
+                                    //   echo "<div class='alert alert-success' role='alert'>
+                                    //   <h4 class='alert-heading'> <i class='fal fa-exclamation-triangle'></i> Massage Error</h4>
+                                    //   <p>promo code is not match or you are used.</p>
+                                    //   $quantity
+                                    // </div>";
+                                      
+                                    //   die();
+                                     $queryOrder="UPDATE customer_table SET 
+                                                                         
+                                                                         full_name_customer ='$name',
+                                                                         phone_customer  = $phone,
+                                                                         email_customer = '$email',
+                                                                         street_customer = '$street',
+                                                                         city_customer  = '$city',
+                                                                         password_customer = '$pass',
+                                                                         promo_code = '$CODE',
+                                                                         status_promo = '$status'";
+                                    
+                                     if($resOrder=mysqli_query($conn,$queryOrder)){
+                                         
+                                        $queryInsert="INSERT INTO order_table (customer_id,order_status, `order_date`, `total`)
+                                                                       VALUES ($id_customer,'0',Now(),$Grand)";
+                                        $resInsert=mysqli_query($conn,$queryInsert);
+                                        if($rowInsert = mysqli_fetch_assoc($resInsert)) {
+                                            $order=$rowInsert['id_order'];
+                                            $item="INSERT INTO `order_items`(order_id,product_id,quantity,list_price)
+                                                   VALUES                   ($order,$img,$quantity,$sub)";
+                                                   if($resItem =mysqli_query($conn,$item)){
+                                                    sendmail($_POST["email_customer"] , "Welcome 
+                                                    We are glad your visit to Bustok.
+                                                    Your request has been confirmed");
+                                                   }
+                                                   
+                                            
+                                        }
+                                         
+
+
+                                     }else{
+                                        echo "<div class='alert alert-success' role='alert'>
+                                        <h4 class='alert-heading'> <i class='fal fa-exclamation-triangle'></i> Massage Error</h4>
+                                        <p>error.</p>
+                                        
+                                      </div>";
+
+                                     }
+                                    
+
+
+
+
+
+
+
+
+                                     }
